@@ -5,11 +5,15 @@
 }
 body {
 	margin: 0;
-	padding: 5px;
+	padding: 1em;
 	background: var(--bg);
 	color: var(--font);
 	justify-content: center;
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1em;
+	font-family: monospace;
 }
 thead td {
 	text-align: center;
@@ -20,17 +24,18 @@ tbody td {
 	font-weight: normal;
 }
 table {
-	border-spacing: 0;
+	border-spacing: 1px;
 }
 tr {
 	border: none;
 	outline: none;
 }
 table, td {
-	border: 1px solid var(--font);
 	outline: none;
 }
 td {
+	border: 1px solid var(--font);
+	empty-cells: hide;
 	padding: 2px 5px;
 }
 input {
@@ -46,4 +51,10 @@ input {
 	font-size: 12px;
 	text-align: left;
 	font-weight: normal;
+}
+input[disabled], input[readonly] {
+	background: #b9b9b9;
+}
+.center {
+	text-align: center;
 }
